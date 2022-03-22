@@ -1,0 +1,45 @@
+{
+  "name": "p5.gradient",
+  "version": "0.0.1",
+  "description": "Fill shapes in p5.js with Linear, Radial and Conic Gradients.",
+  "main": "src/p5.gradient.js",
+  "unpkg": "dist/p5.gradient.min.js",
+  "browser": "dist/p5.gradient.min.js",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "build": "npm run clean && gulp",
+    "version": "npm run build && git add -A dist/",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alterebro/p5.gradient.git"
+  },
+  "keywords": [
+    "gradient",
+    "p5",
+    "p5js",
+    "processing",
+    "linear",
+    "radial",
+    "conic"
+  ],
+  "author": "Jorge Moreno, @alterebro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alterebro/p5.gradient/issues"
+  },
+  "homepage": "https://github.com/alterebro/p5.gradient#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
