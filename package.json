@@ -1,10 +1,10 @@
 {
-  "name": "p5.gradient",
+  "name": "p5.fillGradient",
   "version": "0.0.1",
   "description": "Fill shapes in p5.js with Linear, Radial and Conic Gradients.",
-  "main": "src/p5.gradient.js",
-  "unpkg": "dist/p5.gradient.min.js",
-  "browser": "dist/p5.gradient.min.js",
+  "main": "src/p5.fillGradient.js",
+  "unpkg": "dist/p5.fillGradient.min.js",
+  "browser": "dist/p5.fillGradient.min.js",
   "scripts": {
     "clean": "rm -rf dist/*",
     "build": "npm run clean && gulp",
@@ -16,10 +16,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alterebro/p5.gradient.git"
+    "url": "git+https://github.com/alterebro/p5.fillGradient.git"
   },
   "keywords": [
     "gradient",
+    "fill",
     "p5",
     "p5js",
     "processing",
@@ -30,9 +31,9 @@
   "author": "Jorge Moreno, @alterebro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alterebro/p5.gradient/issues"
+    "url": "https://github.com/alterebro/p5.fillGradient/issues"
   },
-  "homepage": "https://github.com/alterebro/p5.gradient#readme",
+  "homepage": "https://github.com/alterebro/p5.fillGradient#readme",
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
@@ -41,5 +42,6 @@
     "gulp-header": "^2.0.9",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2"
-  }
+  },
+  "dependencies": {}
 }

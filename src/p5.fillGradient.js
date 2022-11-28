@@ -1,5 +1,5 @@
 /*!
-    p5.gradient - MIT License
+    p5.fillGradient - MIT License
     Copyright (c) 2022 Jorge Moreno, @alterebro
  */
 
@@ -7,7 +7,7 @@
 
     'use strict';
 
-    p5.prototype.gradient = function( type = 'linear', props = {}, context = false ) {
+    p5.prototype.fillGradient = function( type = 'linear', props = {}, context = false ) {
 
         let _defaults = {
 

@@ -1,9 +1,9 @@
-/*! p5.gradient v0.0.1 (c) 2022 Jorge Moreno, @alterebro */
+/*! p5.fillGradient v0.0.1 (c) 2022 Jorge Moreno, @alterebro */
 "use strict";
 
 (function() {
     "use strict";
-    p5.prototype.gradient = function() {
+    p5.prototype.fillGradient = function() {
         var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "linear";
         var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
         var context = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
