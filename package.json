@@ -1,6 +1,6 @@
 {
   "name": "p5.fillGradient",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fill shapes in p5.js with Linear, Radial and Conic Gradients.",
   "main": "src/p5.fillGradient.js",
   "unpkg": "dist/p5.fillGradient.min.js",

@@ -1,4 +1,4 @@
-/*! p5.fillGradient v0.0.1 (c) 2022 Jorge Moreno, @alterebro */
+/*! p5.fillGradient v0.0.2 (c) 2022 Jorge Moreno, @alterebro */
 "use strict";
 
 (function() {
