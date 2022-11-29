@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>p5.fillGradient Example</title>
+</head>
+<body>
+
+<script src="https://unpkg.com/p5"></script>
+<script src="https://unpkg.com/p5.fillgradient"></script>
+<script>
+
+function setup() {
+    createCanvas(600, 400);
+    noStroke();
+    noLoop();
+
+    // Red Column : Linear
+    fill('#c00');
+    rect(0, 0, 200, 200);
+
+    fillGradient('linear', {
+        from : [0, 200],
+        to : [200, 400],
+        steps : [
+            color('#c00'),
+            color('#fff')
+        ]
+    });
+    rect(0, 200, 200, 200);
+
+    // Green Column : Radial
+    fill('#093');
+    rect(200, 0, 200, 200);
+
+    fillGradient('radial', {
+        from : [300, 300, 0],
+        to : [300, 300, 150],
+        steps : [
+            [color('#fff'), 0],
+            [color(0, 164, 64), .25],
+            [color('#030'), .75],
+            [color('#000'), 1]
+        ]
+    });
+    rect(200, 200, 200, 200);
+
+    // Blue Column : Conic
+    fill('#05a');
+    rect(400, 0, 200, 200);
+
+    fillGradient('conic', {
+        from : [500, 300, 90], // x, y, angle(degrees)
+        steps : [
+            color('#cef'),
+            color('#05a'),
+            color('#037')
+        ]   // p5.color objects
+    });
+    rect(400, 200, 200, 200);
+
+}
+</script>
+</body>
+</html>

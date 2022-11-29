@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>q5.fillGradient Example</title>
+</head>
+<body>
+
+<script src="https://unpkg.com/q5xjs@0.0.5/q5.min.js"></script>
+<script src="https://unpkg.com/q5xjs@0.0.5/q5.p5acl.js"></script>
+<script src="https://unpkg.com/p5.fillgradient"></script>
+<script>
+
+new Q5("global");
+function setup() {
+    createCanvas(600, 400);
+    noStroke();
+    noLoop();
+
+    // Red Column : Linear
+    fill(128, 0, 0);
+    rect(0, 0, 200, 200);
+
+    addons.fillGradient('linear', {
+        from : [0, 200],
+        to : [200, 400],
+        steps : [
+            color(128, 0, 0),
+            color(255)
+        ]
+    });
+    rect(0, 200, 200, 200);
+
+    // Green Column : Radial
+    fill(0, 164, 64);
+    rect(200, 0, 200, 200);
+
+    addons.fillGradient('radial', {
+        from : [300, 300, 0],
+        to : [300, 300, 150],
+        steps : [
+            [color(255), 0],
+            [color(0, 164, 64), .25],
+            [color(0, 64, 0), .75],
+            [color(0), 1]
+        ]
+    });
+    rect(200, 200, 200, 200);
+
+    // Blue Column : Conic
+    fill(0, 64, 192);
+    rect(400, 0, 200, 200);
+
+    addons.fillGradient('conic', {
+        from : [500, 300, 90],
+        steps : [
+            color(212, 224, 255),
+            color(0, 96, 212),
+            color(0, 64, 128)
+        ]
+    });
+    rect(400, 200, 200, 200);
+
+}
+</script>
+</body>
+</html>
