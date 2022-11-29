@@ -39,7 +39,7 @@ fillGradient('linear',...
 
 #### &mdash; `properties`
 
-`Object` with the following keys:
+`Object` (Optional) with the following keys:
 
 * **`from`** : *`Array [x, y, (radius | angle)]`*. Starting x and y point absolute coordinates. Radial and Conic gradients add a third value, `radius` / `angle` (expressed in degrees) respectively.
 * **`to`** : *`Array [x, y, (radius)]`*. Ending x and y point coordinates.
@@ -61,7 +61,7 @@ fillGradient('linear',...
 
 #### &mdash; `context`
 
-`Object (drawingContext)`
+`Object (drawingContext)` (Optional)
 
 
 ## Examples:
