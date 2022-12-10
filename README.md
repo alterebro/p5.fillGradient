@@ -70,13 +70,13 @@ fillGradient('linear',...
 
 ```js
 fillGradient('linear', {
-    from : [0, 0],   // x, y
-    to : [400, 400], // x, y
+    from : [0, 0],   // x, y : Coordinates
+    to : [400, 400], // x, y : Coordinates
     steps : [
         color(255),
         color(0, 96, 164),
         color(0)
-    ]   // p5.color objects
+    ] // Array of p5.color objects or arrays containing [p5.color Object, Color Stop (0 to 1)]
 });
 ```
 
@@ -90,7 +90,7 @@ fillGradient('radial', {
         color(255),
         color(0, 96, 164),
         color(0)
-    ]   // p5.color objects
+    ] // Array of p5.color objects or arrays containing [p5.color Object, Color Stop (0 to 1)]
 });
 ```
 
@@ -103,7 +103,7 @@ fillGradient('conic', {
         color(255),
         color(0, 96, 164),
         color(0)
-    ]   // p5.color objects
+    ] // Array of p5.color objects or arrays containing [p5.color Object, Color Stop (0 to 1)]
 });
 ```
 
