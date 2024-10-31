@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>p5.fillGradient createGraphics Example</title>
+</head>
+<body>
+
+<script src="https://unpkg.com/p5"></script>
+<script src="https://unpkg.com/p5.fillgradient"></script>
+<script>
+
+let pg;
+
+function setup() {
+
+    createCanvas(200, 200);
+    noStroke();
+    noLoop();
+
+    fill('#c00');
+    rect(0, 0, 200, 200);
+
+    pg = createGraphics(100, 100);
+
+    let gradient = {
+        from : [0, 0],
+        to : [100, 100],
+        steps : [
+            color('#ff0'),
+            color('#00c')
+        ]
+    }
+
+    fillGradient('linear', gradient, pg);
+
+    pg.stroke('#000');
+    pg.strokeWeight(5);
+    pg.rect(0, 0, 100, 100);
+
+    image(pg, 50, 50);
+}
+
+</script>
+</body>
+</html>
