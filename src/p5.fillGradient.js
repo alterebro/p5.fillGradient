@@ -54,6 +54,8 @@
 
                 let _step = !Array.isArray( step ) ? [step] : step
                 let _stop = !!_step[1] ? _step[1] : ( i / (_props.steps.length-1) );
+                    _stop = Math.min(1, Math.max(0, _stop));
+
                 _gradient.addColorStop( _stop, _step[0] )
 
             });
