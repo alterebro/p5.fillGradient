@@ -1,4 +1,4 @@
-/*! p5.fillgradient v0.1.2 (c) 2024 Jorge Moreno, @alterebro */
+/*! p5.fillgradient v0.2.0 (c) 2026 Jorge Moreno, @alterebro */
 "use strict";
 
 (function() {
@@ -26,7 +26,7 @@
         let _type = type.toLowerCase();
         _type = !!_defaults[_type] ? _type : "linear";
         let _props = Object.assign(_defaults[_type], props);
-        let _ctx = !context ? canvas.getContext("2d") : context.canvas.getContext("2d");
+        let _ctx = !context ? this.drawingContext : context.drawingContext || context.canvas.getContext("2d");
         let _gradients = {
             linear: () => _ctx.createLinearGradient(_props.from[0], _props.from[1], _props.to[0], _props.to[1]),
             radial: () => _ctx.createRadialGradient(_props.from[0], _props.from[1], _props.from[2], _props.to[0], _props.to[1], _props.to[2]),
