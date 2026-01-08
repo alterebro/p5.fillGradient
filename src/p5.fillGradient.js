@@ -31,7 +31,7 @@
             _type = (!!_defaults[_type]) ? _type : 'linear'
 
         let _props = Object.assign(_defaults[_type], props);
-        let _ctx = (!context) ? canvas.getContext("2d") : context.canvas.getContext('2d');
+        let _ctx = (!context) ? this.drawingContext : (context.drawingContext || context.canvas.getContext('2d'));
 
         let _gradients = {
 
